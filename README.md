@@ -1,2 +1,5 @@
 # aula
-aulas de php com boostrap
+Aulas de php com boostrap
+
+Professor Cristiano Chagas
+Aluno Junior Sousa
