@@ -5,31 +5,90 @@ include_once ("./componentes/navbar.php");
 $title = "<h1>Foreach</h1><br>";
 echo $title;
 
-$nome = 'O FOREACH é uma simplificação do operador FOR para se trabalhar em coleções de dados,
+$lista = array(
+        0 =>array (1,'cristiano','7295812032', '85 999593777','616525-000', false), 
+        1 =>array (2 , 'lorena', '345624645' ,'85 9995959595','616525-000', false),     
+        2 =>array (3, 'junior' , '63426462464', '85 26161681681','616525-000', true),     
+        3 =>array (4, 'maria ', '342684646524', '85 654646849849','616525-000',false),  
+        4 =>array (5, 'Lucas ', '342684646524', '85 654646849849','616525-000',false)             
+      );
+#criação do aray de frutas
+$frutas = array();
+
+?>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12"  style="text-align:justify" >
+        <p>O FOREACH é uma simplificação do operador FOR para se trabalhar em coleções de dados,
 ou seja, vetores e matrizes. Ele permite acessar cada elemento individualmente iterando sobre 
 toda a coleção e sem a necessidade de informação de índices.
 Por exemplo, supondo que fosse preciso percorrer um vetor com alguns elementos com o FOR.
 Seria necessário utilizar um contador para servir também de índice para acessar cada elemento,
-conforme a listagem a seguir. <br><br>
+conforme a listagem a seguir.</p>
+    </div>
+  </div>
 
-DEMONSTRAÇÃO: <br><br>
+  <div class="row">
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">CEP</th>
+        <th scope="col">Controles  <i class="fas fa-gamepad"></i></th>        
+      </tr>
+    </thead>
+    <tbody>
 
-$vetor = array(1, 2, 3, 4, 5);<br>
-for($i = 0; $i < 5; $i++)<br>
-{
-  $item = $vetor[$i];<br>
-echo $item." "; <br>
-}';
+    <?php  foreach ($lista as $campo): ?>
+      <?php if($campo[5] == true): ?> 
 
-echo $nome. "<br><br>". "RESULTADO = ";
+      <?php else: ?>   
+      <tr>
+        <th scope="row"><?=$campo[0]; ?></th>
+        <td><?php echo $campo[1]; ?></td>
+        <td><?=$campo[2]; ?></td>
+        <td><?=$campo[3]; ?></td>
+        <td><?=$campo[4]; ?></td>        
+        <td> 
+          <a class="btn btn-success" href="http://">Salvar</a>    
+          <a class="btn btn-default" href="http://">Editar</a>      
+          <a class="btn btn-danger" href="http://">Deletar</a>      
+      </td>  
+      </tr>
 
-$vetor = array(1, 2, 3, 4, 5);
-for($i = 0; $i < 5; $i++)
-{
-  $item = $vetor[$i];
-echo $item." ";
-}
+      <?php endif; ?>    
+    <?php endforeach; ?>
 
 
+    </tbody>
+  </table>
+  </div>
+
+    <div class="row">
+      <div class="col=12">
+          <p>Exercicio: Criar uma tabela com dados de um array de frutas com seus respectivos nomes,  preços e codigos</p>
+      </div>
+      <!-- escrever a tabela apartir daqui -->
+
+
+
+
+      <!-- tabela final -->
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+<?php
 include_once "./componentes/footer.php";
 ?>
