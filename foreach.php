@@ -114,20 +114,7 @@ conforme a listagem a seguir.</p>
   </table>
   </div>
 
-
-
-      <!-- tabela final -->
-     
-</table>
-
-</div>
-    </div>
-    
-
-
-
-
-
+  
 
 <?php
 include_once "./componentes/footer.php";

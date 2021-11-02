@@ -27,6 +27,17 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sistema
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="formulario.php">Cadastro</a></li>
+            <li><a class="dropdown-item" href="login.php">login</a></li>
+          </ul>
+        </li>
+
+
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
