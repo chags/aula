@@ -2,6 +2,7 @@
 
 include_once("./conexao/conexao.php");
 
+
 try {
     # faz a conexao com o banco de dados
     $conexao = new pdo('mysql:host=' . HOST . ';dbname=' . DBNAME, USER, PASS);
