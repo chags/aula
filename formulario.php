@@ -12,7 +12,7 @@ echo $title;
     
     </div>
     <div class="col-sm-8">
-        <form method="POST" action="form.php"  class="row g-3">
+        <form method="POST" action="scripts/form.php"  class="row g-3">
             <div class="col-12">
                     <label for="inputAddress" class="form-label">Nome</label>
                     <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Digite seu nome">

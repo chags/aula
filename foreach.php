@@ -54,10 +54,12 @@ conforme a listagem a seguir.</p>
       <?php else: ?>   
       <tr>
         <th scope="row"><?=$campo[0]; ?></th>
-        <td><?php echo $campo[1]; ?></td>
+        <td><?=$campo[1]; ?></td>
         <td><?=$campo[2]; ?></td>
         <td><?=$campo[3]; ?></td>
-        <td><?=$campo[4]; ?></td>        
+        <td><?=$campo[4]; ?></td> 
+        
+        
         <td> 
           <a class="btn btn-success" href="http://">Salvar</a>    
           <a class="btn btn-default" href="http://">Editar</a>      

@@ -34,6 +34,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="formulario.php">Cadastro</a></li>
             <li><a class="dropdown-item" href="login.php">login</a></li>
+            <li><a class="dropdown-item" href="usuarios.php">Usuarios</a></li>        
           </ul>
         </li>
 

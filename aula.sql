@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Nov-2021 às 00:34
+-- Tempo de geração: 04-Nov-2021 às 21:42
 -- Versão do servidor: 10.4.20-MariaDB
 -- versão do PHP: 7.3.29
 
@@ -24,50 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Estrutura da tabela `produto`
 --
 
-CREATE TABLE `usuario` (
-  `id_usuario` int(11) NOT NULL,
-  `usuario_nome` varchar(150) DEFAULT NULL,
-  `usuario_email` varchar(150) DEFAULT NULL,
-  `usuario_senha` varchar(150) DEFAULT NULL,
-  `usuario_endereco` varchar(200) DEFAULT NULL,
-  `usuario_cidade` varchar(100) DEFAULT NULL,
-  `usuario_estado` varchar(100) DEFAULT NULL,
-  `usuario_cep` varchar(8) DEFAULT NULL
+CREATE TABLE `produto` (
+  `id_produto` int(11) NOT NULL,
+  `produto_nome` varchar(100) DEFAULT NULL,
+  `produto_valor` varchar(11) DEFAULT NULL,
+  `produto_descricao` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `usuario`
---
-
-INSERT INTO `usuario` (`id_usuario`, `usuario_nome`, `usuario_email`, `usuario_senha`, `usuario_endereco`, `usuario_cidade`, `usuario_estado`, `usuario_cep`) VALUES
-(1, 'cristiano', 'cristiano@admin.com', '9407c826d8e3c07ad37cb2d13d1cb641', NULL, NULL, NULL, NULL),
-(2, 'junior', 'junior@admin.com', '9407c826d8e3c07ad37cb2d13d1cb641', NULL, NULL, NULL, NULL),
-(5, 'Valter Junior', 'admin@admin.com', '123456', 'rua colina 110', 'caucaia', 'CE', '60541245'),
-(6, 'Lorena', 'lorena@admin.com', '555555', 'rua colina 110', 'fortaleza', 'CE', '6054548'),
-(7, 'cristine', 'cris@admin.com.br', '46f227e9cf17e2e1e88b14e679047bd9', 'colina 112', 'caucaia', 'CE', '6165250');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `usuario`
+-- Índices para tabela `produto`
 --
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_usuario`);
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`id_produto`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT de tabela `usuario`
+-- AUTO_INCREMENT de tabela `produto`
 --
-ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `produto`
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
