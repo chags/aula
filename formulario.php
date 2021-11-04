@@ -39,16 +39,22 @@ echo $title;
                     <label for="inputState" class="form-label">Estado</label>
                     <select id="inputState" class="form-select" name="estado" >
                     <option selected>selecionar...</option>
-                    <option value="CE">CEARÁ</option>                
-                    <option>...</option>
+                    <option value="CE">Ceará</option>                
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>                
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>                
+                    <option value="BA">Bahia</option>
+                    <option value="AL">Alagoas</option>                
+                    <option value="ES">Espírito Santo</option>
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <label for="inputZip" class="form-label">Cep</label>
+                    <label for="inputZip" class="form-label">CEP</label>
                     <input type="text" name="cep" class="form-control" id="inputZip">
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
         </form>
     </div>
