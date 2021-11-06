@@ -14,7 +14,7 @@ try {
     
 
     $data = $conexao->query("SELECT * FROM usuario")->fetchAll();
-   print_r($data). '<br>';
+   //print_r($data). '<br>';
 
 
     //foreach ($data as $row) {
