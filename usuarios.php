@@ -33,9 +33,12 @@ try {
     <thead>
       <tr>
         <th scope="col">ID</th>
-        <th scope="col">Nome</th>
-        <th scope="col">CPF</th>
-        <th scope="col">Telefone</th>
+        <th scope="col">Usuário</th>
+        <th scope="col">Email</th>
+        <th scope="col">Senha</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">Cidade</th>
+        <th scope="col">Estado</th>
         <th scope="col">CEP</th>
         <th scope="col">Controles  <i class="fas fa-gamepad"></i></th>        
       </tr>
@@ -46,12 +49,13 @@ try {
         
       <tr>
         <th scope="row"><?=$campo['id_usuario']; ?></th>
-        <td><?=$campo[1]; ?></td>
-        <td><?=$campo[2]; ?></td>
-        <td><?=$campo[3]; ?></td>
-        <td><?=$campo[4]; ?></td> 
-        
-        
+        <td><?=$campo['usuario_nome']; ?></td>
+        <td><?=$campo['usuario_email']; ?></td>
+        <td><?=$campo['usuario_senha']; ?></td>
+        <td><?=$campo['usuario_endereco']; ?></td> 
+        <td><?=$campo['usuario_cidade']; ?></td>
+        <td><?=$campo['usuario_estado']; ?></td>
+        <td><?=$campo['usuario_cep']; ?></td>
         <td> 
           <a class="btn btn-success" href="http://">Salvar</a>    
           <a class="btn btn-default" href="http://">Editar</a>      
@@ -66,17 +70,6 @@ try {
     </tbody>
   </table>
   </div>
-
-
-
-
-
-
-
-
-
-
-
 
 <?php
 include_once "./componentes/footer.php";
