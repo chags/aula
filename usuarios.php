@@ -11,10 +11,8 @@ try {
     # faz a conexao com o banco de dados
     $conexao = new pdo('mysql:host=' . HOST . ';dbname=' . DBNAME, USER, PASS);
     $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-
     $data = $conexao->query("SELECT * FROM usuario")->fetchAll();
-   //print_r($data). '<br>';
+   //print_r($_GET['id']). '<br>';
 
 
     //foreach ($data as $row) {
@@ -29,6 +27,10 @@ try {
 ?>
 
 <div class="row">
+<span>
+  <a class="btn btn-success" href="http://localhost/aula/formulario.php"><i class='fas fa-plus'></i> Incluir</a>
+</span>
+ 
     <table class="table table-hover">
     <thead>
       <tr>
@@ -57,10 +59,16 @@ try {
         <td><?=$campo['usuario_estado']; ?></td>
         <td><?=$campo['usuario_cep']; ?></td>
         <td> 
-          <a class="btn btn-success" href="http://">Salvar</a>    
-          <a class="btn btn-default" href="http://">Editar</a>      
-          <a class="btn btn-danger" href="http://">Deletar</a>      
-      </td>  
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Editar" data-bs-placement="top">
+        <a class="btn btn-info" href="http://localhost/aula/editar-cadastro.php?id=<?=$campo['id_usuario']; ?>"><i class='fas fa-edit'></i></a>      
+        </span>
+
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Deletar" data-bs-placement="top">
+        <a class="btn btn-danger" href="http://"><i class='fas fa-trash'></i></a>      
+        </span>
+ 
+          
+        </td>  
       </tr>
 
          
