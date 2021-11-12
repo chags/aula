@@ -18,21 +18,17 @@ try {
         'usuario_cep'=> $_POST['cep']
     );
     
-    echo "<pre>";
-        print_r($usuario);
-    echo "</pre>";
     #inserindo dado no banco de dados
     $id = $conexao->prepare('INSERT INTO usuario (usuario_nome, usuario_email, usuario_senha, usuario_endereco, usuario_cidade, usuario_estado, usuario_cep) VALUES (:usuario_nome, :usuario_email, :usuario_senha, :usuario_endereco, :usuario_cidade, :usuario_estado, :usuario_cep)')->execute($usuario);
 
-    echo 'cadastro efetuado com sucesso <br>';
-    echo 'o numero de cadastro de usuario: '. $id;
-
 
 } catch(PDOException $e) {
-    echo 'ERROR: ' . $e->getMessage();
+    $e->getMessage();
 }
 
+header("location: ../usuarios.php?mensage='cadastro efetuado com sucesso");
 
+die();
 
 
 ?>
