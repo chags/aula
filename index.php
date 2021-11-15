@@ -8,7 +8,6 @@ include_once ("./componentes/navbar.php");
 
 ?>
 
-    
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -125,14 +124,6 @@ include_once ("./componentes/navbar.php");
         </div>
     </div>
 </div>     
-
-
-
-
-
-
-
-
 
 
 <?php
