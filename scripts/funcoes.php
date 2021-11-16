@@ -81,4 +81,29 @@ function UpdateSenha(){
 
 } 
 
+function DeleteUsuario(){
+
+    try {
+        $conexao = new pdo('mysql:dbname=aula;host=localhost', 'root', '');
+        $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conexao->prepare('DELETE usuario SET id_usuario=:id_usuario WHERE id_usuario=:id_usuario');
+        $stmt->execute($_POST); 
+        //$user = $stmt->fetch(); 
+        //return $user;
+        # organizando os dado para enviar para o banco
+
+        #inserindo dado no banco de dados
+      
+
+    } catch(PDOException $e) {
+        $e->getMessage();
+    }
+   
+
+   header("location: https://$_SERVER[HTTP_HOST]/aula/usuarios.php?mensage=usuario deletado com sucesso");
+
+    die();
+
+} 
+
 ?>
