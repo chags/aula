@@ -1,14 +1,6 @@
 <?php
 include_once("../conexao/conexao.php");
-
-
-echo "logando usuario";
-echo "aqui";
-echo "<pre>";
-var_dump($_POST);
-echo "</pre>";
  
-
 $usuario_email = $_POST['email'];
 
 try {
@@ -21,12 +13,22 @@ try {
     $user = $stmt->fetch();  
 
    if ($user['usuario_senha'] == $_POST['senha'] ){
-        echo "usuario logado com sucesso";
-        # code...
+
+        $mensage = "usuario logado com sucesso";
+        header('Location: https://localhost/aula/usuarios.php?mensagem='.$mensage);
+        die(); 
+
     }else{
-        header('Location: https://localhost/aula/login.php');
-        exit;
+        $mensage = "não foi possivel acesso tente outra vez";
+        header('Location: https://localhost/aula/login.php?mensagem='.$mensage);
+        die();
     }
+
+
+/*     $stmt = $conexao->prepare('SELECT * FROM usuario WHERE id_usuario = :id_usuario');
+    $stmt->execute(['usuario_id' => $_GET['id']]); 
+    $user = $stmt->fetch(); */   
+
 
     //$data = $conexao->query("SELECT * FROM usuario")->fetchAll();
     //print_r($data). '<br>';

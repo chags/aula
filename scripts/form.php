@@ -26,7 +26,7 @@ try {
     $e->getMessage();
 }
 
-header("location: ../usuarios.php?mensage='cadastro efetuado com sucesso");
+header("location: https://$_SERVER[HTTP_HOST]/aula/usuarios.php?mensage=cadastro efetuado com sucesso");
 
 die();
 

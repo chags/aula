@@ -23,8 +23,18 @@ try {
 } catch (PDOException $e) {
     echo 'ERRO'. $e->getMessage();
 }
+
 #tarefa de casa colocar todos os usuarios numa tabela usando o foreach
+
+//$actual_link = "http://$_SERVER[HTTP_HOST]";
+
+//echo $actual_link;
 ?>
+<?php if(isset($_GET['mensage'])): ?>
+  <div class="alert alert-success" role="alert">
+    <?=$_GET['mensage']; ?>
+   </div>
+<?php endif; ?>
 
 <div class="row">
 <span>
@@ -63,8 +73,13 @@ try {
         <a class="btn btn-info" href="http://localhost/aula/editar-cadastro.php?id=<?=$campo['id_usuario']; ?>"><i class='fas fa-edit'></i></a>      
         </span>
 
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Atualizar senha" data-bs-placement="top">
+        <a class="btn btn-warning" href="http://localhost/aula/update-senha.php?id=<?=$campo['id_usuario']; ?>"><i class='fas fa-lock'></i></a>      
+        </span>
+
+
         <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Deletar" data-bs-placement="top">
-        <a class="btn btn-danger" href="http://"><i class='fas fa-trash'></i></a>      
+        <a class="btn btn-danger" href="http://localhost/aula/scripts/deleta_usuario.php?id_usuario=<?=$campo['id_usuario']; ?>"><i class='fas fa-trash'></i></a>      
         </span>
  
           
