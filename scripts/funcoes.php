@@ -81,6 +81,7 @@ function UpdateSenha(){
 
 } 
 
+<<<<<<< Updated upstream
 function DeleteUsuario(){
 
     try {
@@ -105,5 +106,7 @@ function DeleteUsuario(){
     die();
 
 } 
+=======
+>>>>>>> Stashed changes
 
 ?>
