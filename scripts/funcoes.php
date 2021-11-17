@@ -81,14 +81,14 @@ function UpdateSenha(){
 
 } 
 
-<<<<<<< Updated upstream
-function DeleteUsuario(){
+function Delete($tabela, $campos){
 
     try {
+        //print_r($_GET);
         $conexao = new pdo('mysql:dbname=aula;host=localhost', 'root', '');
         $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conexao->prepare('DELETE usuario SET id_usuario=:id_usuario WHERE id_usuario=:id_usuario');
-        $stmt->execute($_POST); 
+        $stmt = $conexao->prepare('DELETE FROM $tabela WHERE id_usuario=:id_usuario');
+        $stmt->execute($campos); 
         //$user = $stmt->fetch(); 
         //return $user;
         # organizando os dado para enviar para o banco
@@ -106,7 +106,5 @@ function DeleteUsuario(){
     die();
 
 } 
-=======
->>>>>>> Stashed changes
 
 ?>

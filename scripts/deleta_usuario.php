@@ -1,11 +1,12 @@
 <?php
 include_once ("funcoes.php");
 
-print_r($_POST);
+//print_r($_GET);
 
+$tabela = 'usuario';
+$campos = $_POST;
 
-
-DeleteUsuario();
+Delete($tabela, $campos);
 
 
 ?>
