@@ -2,8 +2,9 @@
 
 include_once ("./componentes/head.php");
 include_once ("./componentes/navbar.php");
-$title = "<h1>Foreach</h1><br>";
-echo $title;
+
+"<h1>Foreach</h1><br>";
+
 
 $lista = array(
         0 =>array (1,'cristiano','7295812032', '85 999593777','616525-000', false), 
