@@ -24,6 +24,8 @@ class Usuario{
         $calc = ['total' => $total, 'resto' => $resto];
         return  $calc;
     }
+
+
 }
 
 ?>
