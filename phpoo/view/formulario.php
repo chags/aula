@@ -19,15 +19,15 @@
     
     </div>
     <div class="col-sm-8">
-        <form method="POST" action="phpoo/model/usuario.php"  class="row g-3">
+        <form method="POST" action="model/usuario.php"  class="row g-3">
             <div class="col-12">
-                    <label for="inputAddress" class="form-label"><i class="fas fa-user-edit"></i> Nome</label>
-                    <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Digite seu nome">
+                    <label for="inputAddress" class="form-label"><i class="fas fa-user-edit"></i>Digite a área do triangulo</label>
+                    <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Digite a área do triangulo">
             </div>
 
             <div class="col-12">
-                    <label for="inputAddress" class="form-label"><i class="fas fa-user-edit"></i> Nome</label>
-                    <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Digite seu nome">
+                    <label for="inputAddress" class="form-label"><i class="fas fa-user-edit"></i>Digite a base do triangulo</label>
+                    <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Digite a base do triangulo">
             </div>
 
             <div class="col-12">
