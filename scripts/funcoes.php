@@ -25,8 +25,6 @@ function ListaUsuario($id_usuario){
         echo 'ERRO'. $e->getMessage();
     }
 
-
-
    
 }
 
