@@ -16,3 +16,4 @@ $valor = 5785;
 
 $dizimo = $data->Dizimo($valor);
 
+
