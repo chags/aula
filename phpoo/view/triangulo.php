@@ -8,63 +8,65 @@ include ("../model/url.php");
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Cálculo</title>
   </head>
   <body style="background-color: #f1f1f1;" >
-
+<div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h2>Cálculos</h2>
+        <div>
+        <div class="col-sm-6">
+            <a href="<?=$local;?>" class="btn bnt-info"  > <i class="fas fa-undo-alt"></i> Voltar</a>
+        <div>      
+      </div>
+</div>
 
 <div class="container">
-  <div class="col-sm-12">
-        <h1>Cálculos</h1>
-  <div>
- <?php if(isset($_GET['area'])): ?>
-    <div class="row align-items-start">
-      <div class="col-sm-2">
-      </div>
-      <div class="col-sm-8">
-        <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h3 class="card-title">Triangulo Calculado</h3>
-          <h4 class="card-subtitle mb-2 text-muted">Area: <?=$_GET['area']; ?> </h4>
-          
-          <a href="http://localhost/aula/phpoo/index.php" class="btn btn-info">Calcular novamente</a>
+    <?php if(isset($_GET['area'])): ?>
+        <div class="row align-items-start">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-8">
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h3 class="card-title">Triangulo Calculado</h3>
+              <h4 class="card-subtitle mb-2 text-muted">Area: <?=$_GET['area']; ?> </h4>
+              
+              <a href="<?=$view.'triangulo.php';?>" class="btn btn-info">Calcular novamente</a>
+            </div>
+          </div>
+          <div class="col-sm-2"></div>
         </div>
-      </div>
-      <div class="col-sm-2"></div>
-    </div>
-  <?php else: ?>
-    <div class="row align-items-start">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8">
-          <form method="POST" action="<?=$controller.'triangulo.php';?>"  class="row g-3">
-              <div class="col-12">
-                      <label for="inputAddress" class="form-label"><i class="fas fa-user-edit"></i>Digite a altura do triangulo</label>
-                      <input type="text" name="altura_triangulo" class="form-control" id="inputAddress" placeholder="Digite a altura do triangulo">
-              </div>
+      <?php else: ?>
+        <div class="row align-items-start">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+              <form method="POST" action="<?=$controller.'triangulo.php';?>"  class="row g-3">
+                  <div class="col-12">
+                          <label for="inputAddress" class="form-label"><i class="fas fa-user-edit"></i>Digite a altura do triangulo</label>
+                          <input type="text" name="altura_triangulo" class="form-control" id="inputAddress" placeholder="Digite a altura do triangulo">
+                  </div>
 
-              <div class="col-12">
-                      <label for="inputAddress" class="form-label"><i class="fas fa-user-edit"></i>Digite a base do triangulo</label>
-                      <input type="text" name="base_triangulo" class="form-control" id="inputAddress" placeholder="Digite a base do triangulo">
-              </div>
+                  <div class="col-12">
+                          <label for="inputAddress" class="form-label"><i class="fas fa-user-edit"></i>Digite a base do triangulo</label>
+                          <input type="text" name="base_triangulo" class="form-control" id="inputAddress" placeholder="Digite a base do triangulo">
+                  </div>
 
-              <div class="col-12">
-                      <button type="submit" class="btn btn-outline-success">Enviar</button>
-              </div>
-          </form>
-      </div>
-      <div class="col-sm-2 ">
+                  <div class="col-12">
+                          <button type="submit" class="btn btn-outline-success">Enviar</button>
+                  </div>
+              </form>
+          </div>
+          <div class="col-sm-2 ">
 
-      </div>
-    </div>
-  <?php endif; ?>
-
- 
-
-
+          </div>
+        </div>
+      <?php endif; ?>
 </div>
 
   
