@@ -1,6 +1,5 @@
 <?php   
 include ("../model/url.php");
-
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -15,18 +14,20 @@ include ("../model/url.php");
     <title>Cálculo</title>
   </head>
   <body style="background-color: #f1f1f1;" >
-<div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <h2>Cálculos</h2>
-        <div>
-        <div class="col-sm-6">
-            <a href="<?=$local;?>" class="btn bnt-info"  > <i class="fas fa-undo-alt"></i> Voltar</a>
-        <div>      
-      </div>
-</div>
+
 
 <div class="container">
+
+      <div class="row">
+        <div class="col-sm-12">
+        <h2>Triangulo <a href="<?=$local;?>" class="badge bg-info"  > <i class="fas fa-undo-alt"></i> Voltar</a></h2>
+        <div> 
+              
+      </div>
+
+
+
+
     <?php if(isset($_GET['area'])): ?>
         <div class="row align-items-start">
           <div class="col-sm-2">
