@@ -25,9 +25,6 @@ include ("../model/url.php");
               
       </div>
 
-
-
-
     <?php if(isset($_GET['area'])): ?>
         <div class="row align-items-start">
           <div class="col-sm-2">
@@ -37,7 +34,6 @@ include ("../model/url.php");
             <div class="card-body">
               <h3 class="card-title">Triangulo Calculado</h3>
               <h4 class="card-subtitle mb-2 text-muted">Area: <?=$_GET['area']; ?> </h4>
-              
               <a href="<?=$view.'triangulo.php';?>" class="btn btn-info">Calcular novamente</a>
             </div>
           </div>
